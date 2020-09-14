@@ -1,0 +1,25 @@
+<div class="container">
+    <h3>Edit User</h3>
+    <p><?= $this->flashSession->output() ?></p>
+
+    <?= $this->tag->form("index/edit/submit"); ?>
+
+        <div class="form-group">
+            <label for="name">Fullname</label>
+            <?= $form->render('name'); ?>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <?= $form->render('email'); ?>
+        </div>
+
+        
+        <div class="form-group">
+            <?php echo $this->tag->submitButton(["Save", "class" => "btn btn-primary"]) ?>
+        </div>
+        
+        <?= $form->render('id'); ?>
+        
+    <?= $this->tag->endForm() ?>
+</div>
